@@ -2,7 +2,7 @@
 
  ![YouTube Extractor Thumbnail](YT%20Extractor.png)
 
-👉 **LIVE DEMO:** [Link will go here after Render Deployment] 👈
+👉 **LIVE DEMO:** [ https://youtube-metadata-extractor.onrender.com] 👈
 
 This project implements a secure, full-stack utility to reliably extract metadata from any public YouTube video URL using **Python/Flask** and the **Google YouTube Data API v3**. It serves as a strong demonstration of API integration, server-side data fetching, and secure key management.
 
