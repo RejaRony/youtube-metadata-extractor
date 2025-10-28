@@ -1,0 +1,176 @@
+/* --- General Resets and Layout --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5; /* Light gray-blue background */
+    color: #333;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #007bff; /* Professional Blue Header */
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+    header h1 {
+        margin: 0;
+    }
+
+/* --- Input Section --- */
+#input-section {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#youtube-url {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* --- Buttons --- */
+#extract-btn, #clear-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#extract-btn {
+    background-color: #28a745; /* Green for action */
+    color: white;
+}
+
+    #extract-btn:hover {
+        background-color: #1e7e34;
+    }
+
+#clear-btn {
+    background-color: #dc3545; /* Red for clear/stop */
+    color: white;
+}
+
+    #clear-btn:hover {
+        background-color: #c82333;
+    }
+
+/* --- Video Details Card --- */
+#video-details {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow to make it pop */
+}
+
+h2 {
+    color: #007bff; /* Blue heading */
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+/* Target the h2 inside the video-details section for spacing */
+#video-details h2 {
+    color: #007bff; /* Blue heading */
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px; /* <--- ADD OR INCREASE THIS MARGIN */
+}
+
+.details-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#thumbnail-container {
+    flex-basis: 350px;
+    max-width: 100%;
+}
+
+#video-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#details-content {
+    flex-grow: 1;
+    min-width: 300px;
+}
+
+#video-title {
+    font-size: 1.6em;
+    color: #343a40; /* Darker title */
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.detail-row {
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #f8f9fa; /* Very light divider */
+}
+
+    .detail-row strong {
+        color: #007bff; /* Blue for labels */
+    }
+
+.description-box {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #d6e9f9;
+    border-radius: 4px;
+    background-color: #eaf6ff; /* Light blue background for description */
+}
+
+/* Error/Message Box */
+#error-message {
+    color: #dc3545; /* Red for errors */
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    display: none; /* Controlled by script.js */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .details-card {
+        flex-direction: column;
+    }
+
+    #thumbnail-container {
+        flex-basis: auto;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+}

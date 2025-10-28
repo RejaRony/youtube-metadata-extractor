@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Metadata Extractor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+</head>
+<body>
+    <header>
+        <h1>YouTube Metadata Extractor 🎬</h1>
+        <p>Securely fetch video details like Title, Duration, and Thumbnail using Python/Flask.</p>
+    </header>
+
+    <main>
+        <section id="input-section">
+            <label for="youtube-url">Enter YouTube URL:</label>
+            <div class="input-group">
+                <input type="text" id="youtube-url" placeholder="Paste the full YouTube link here...">
+                <button id="extract-btn">Extract Details</button>
+                <button id="clear-btn">Clear</button>
+            </div>
+            <div id="error-message" class="message-box"></div>
+        </section>
+
+        <section id="video-details" style="display:none;">
+            <h2>Extracted Video Information</h2>
+
+            <div class="details-card">
+                <div id="thumbnail-container">
+                    <a id="thumbnail-link" href="#" target="_blank">
+                        <img id="video-thumbnail" src="" alt="Video Thumbnail">
+                    </a>
+                </div>
+
+                <div id="details-content">
+                    <h3 id="video-title"></h3>
+
+                    <div class="detail-row">
+                        <strong><i class="fas fa-clock"></i> Duration:</strong>
+                        <span id="video-duration-formatted"></span>
+                    </div>
+
+                    <div class="detail-row">
+                        <strong><i class="fas fa-calendar-alt"></i> Published:</strong>
+                        <span id="publication-date"></span>
+                    </div>
+
+                    <div class="detail-row">
+                        <strong><i class="fas fa-hashtag"></i> Video ID:</strong>
+                        <span id="video-id"></span>
+                    </div>
+
+                    <div class="description-box">
+                        <strong>Description:</strong>
+                        <div id="video-description"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

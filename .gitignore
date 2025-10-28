@@ -1,0 +1,11 @@
+# IDE/OS Ignores
+.vs/
+.vscode/
+Thumbs.db
+.DS_Store
+
+# Python Ignores
+__pycache__/
+*.pyc
+venv/
+.venv/

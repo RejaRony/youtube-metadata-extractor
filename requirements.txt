@@ -1,0 +1,5 @@
+Flask
+gunicorn
+google-api-python-client # To securely call the YouTube Data API
+isodate                   # To parse YouTube's duration format
+requests
